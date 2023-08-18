@@ -4,11 +4,34 @@
  */
 package com.Js.Customer_service.Service;
 
+import com.Js.Customer_service.Entity.Customer;
+import com.Js.Customer_service.Repository.Customer_repository;
+import java.util.List;
+import lombok.AllArgsConstructor;
+import org.springframework.stereotype.Service;
+
 /**
  *
  * @author Asus
  */
+
+@AllArgsConstructor
+@Service
 public class Customer_service {
+    
+    private final Customer_repository customer_repository;
+    
+    public Customer saveCustomer(Customer customer){
+        return customer_repository.save(customer);
+    }
+    
+    public Customer getCustomerById(Integer id){
+        return customer_repository.findById(id).get();
+    }
+    
+    public List<Customer> AllCustomer(){
+        return customer_repository.findAll();
+    } 
     
     
 }
