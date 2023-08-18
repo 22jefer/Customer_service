@@ -33,5 +33,18 @@ public class Customer_service {
         return customer_repository.findAll();
     } 
     
+    public Customer updateCustomer(Customer customer){
+        return customer_repository.save(customer);
+    }
+    
+    public void deleteCustomer(Customer customer){
+        customer_repository.delete(customer);
+        
+    }
+    
+    public void deleteCustomerById(Integer id){
+        customer_repository.deleteById(id);   
+    }
+    
     
 }
