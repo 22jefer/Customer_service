@@ -4,10 +4,45 @@
  */
 package com.Js.Customer_service.Entity;
 
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
 /**
  *
  * @author Asus
  */
+
+@AllArgsConstructor
+@Data
+@NoArgsConstructor
+@Entity
+@Table(name = "Customer" )
 public class Customer {
+    
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int id;
+    
+    @Column(nullable = false)
+    private String nombre;
+    
+    @Column(nullable = false)
+    private String apellido;
+    
+    @Column(nullable = false)
+    private String telefono;
+    
+    private String email;
+    
+    private String direccion;
+    
+    
     
 }
