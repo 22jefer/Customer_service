@@ -31,18 +31,23 @@ public class Customer {
     private int id;
     
     @Column(nullable = false)
-    private String nombre;
+    private String name;
     
     @Column(nullable = false)
-    private String apellido;
+    private String lastName;
     
     @Column(nullable = false)
-    private String telefono;
+    private String phone;
     
     private String email;
     
-    private String direccion;
+    private String address;
     
+    private int Bill_id;
+    
+    private int productId;
+    
+    private int supplierId;
     
     
 }
