@@ -11,6 +11,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
  *
  * @author Asus
  */
+
 public interface Customer_repository extends JpaRepository<Customer, Integer>{
     
 }
